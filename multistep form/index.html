@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+        <title>MultistepFrom</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+            <form data-multi-step class="mutli-step-form">
+                <div class="pane active" data-step>
+                    <h3 class="step-title">This is step 1</h3>
+                   <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" id="email">
+                   </div>
+                   <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" id="password">
+                   </div>
+                   <button type="button" data-next>Next</button>
+                </div>
+                <div class="pane" data-step>
+                    <h3 class="step-title">This is step 2</h3>
+                    <div class="form-group">
+                     <label>address</label>
+                     <input type="text" name="address" id="address">
+                    </div>
+                    <div class="form-group">
+                     <label>City</label>
+                     <input type="text" name="city" id="city">
+                    </div>
+                    <div class="form-group">
+                        <label>Zip code</label>
+                        <input type="text" name="zipcode" id="zipcode">
+                       </div>
+                    <button type="button" data-previous>Previous</button>
+                    <button type="button" data-next>Next</button>
+                </div>
+                <div class="pane" data-step>
+                    <h3 class="step-title">This is step 3</h3>
+                    <div class="form-group">
+                     <label>Name</label>
+                     <input type="text" name="name" id="name">
+                    </div>
+                    <div class="form-group">
+                     <label>Middle name</label>
+                     <input type="text" name="middleName" id="middleName">
+                    </div>
+                    <div class="form-group">
+                        <label>LastName</label>
+                        <input type="LastName" name="LastName" id="LastName">
+                       </div>
+                    <button type="button" data-previous>Previous</button>
+                    <button type="submit">Submit</button> 
+
+                    </button>
+                </div>
+            </form>
+    </body>
+</html>

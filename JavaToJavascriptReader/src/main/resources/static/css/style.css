@@ -1,0 +1,13 @@
+.container {
+    width: 90%;
+    border: solid;
+}
+
+h1 {
+    text-align: center;
+    font-size: 46px;
+}
+
+#canvas {
+    width: 100%;
+}

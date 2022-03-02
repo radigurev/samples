@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Kys</title>
+</head>
+<body>
+        <div class="container">
+            <h1>ChartJS Line Chart With JSON DATA</h1>
+
+            <div>
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+
+        <p id="grades" style="display: none" th:text="${grades}">Obi4am</p>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+            <script type="text/javascript" src="/js/index.js"></script>
+</body>
+</html>
