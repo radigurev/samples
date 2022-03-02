@@ -9,7 +9,8 @@ body {
 	@media screen and (max-width: 580px) {
 	  body {
 		font-size: 16px;
-		line-height: 22px; } }
+		line-height: 22px; } 
+	}
   
   .wrapper {
 	margin: 0 auto;
@@ -19,13 +20,35 @@ body {
 	.selected {
 		background-color: yellow;
 	}
+	
+	.hidden {
+		transition: all 0.3s ease;
+		opacity: 0;
+		transition-delay: 0.5s;
+	}
+
+	.hide {
+		display: none;
+	}
+
+.grade-input {
+	width: 50px;
+}	
+
+.button-div {
+	transition: all 2s ease;
+}
+
+.return-div {
+	transition: all 2s ease;
+}
 
   .table {
 	  position: absolute;
-	  left: 25%;
+	  left: 15%;
 	  top: 20%;
 	  transform: translate(-50,-50);
-	width: 50%;
+	width: 70%;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 	display: table; }
 	
@@ -67,7 +90,8 @@ body {
   
   .cell {
 	padding: 6px 12px;
-	display: table-cell; }
+	display: table-cell;
+}
 	@media screen and (max-width: 580px) {
 	  .cell {
 		padding: 2px 16px;
