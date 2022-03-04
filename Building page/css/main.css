@@ -18,8 +18,11 @@ body {
   color: #fff;
   background-color: rgb(255, 255, 255);
   font-family: Montserrat, Arial, Helvetica, sans-serif;
-  font-weight: 700;
+  scrollbar-width: normal;
+    scrollbar-color: #777 #555;
 }
+
+
 
 a {
   text-decoration: none;
@@ -56,8 +59,8 @@ a {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: #c4c3d0
-  ;
+  background: url('../img/ruhouse-blur.PNG') no-repeat center;
+  background-size: 100vw 100vh;
 }
 
 .parallax__layer {
@@ -69,10 +72,16 @@ a {
 }
 
 .sky {
-  background: url('../img/ruhouse.jpg') no-repeat center;
+   top: 0;
+   left: -22%;
+  width: 112%;
+  height: 100%;
+  background-image: url(../img/sky.jpg);
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   transform: translateZ(-600px) scale(3);
-  z-index: 1;
+  z-index: -1;
 }
 
 
@@ -94,7 +103,6 @@ a {
   top: 2.5rem;
 }
 
-
 .year-container {
   position: absolute;
   left: 50%;
@@ -115,37 +123,39 @@ a {
 }
 
 
-.info {
-  
+.info { 
   position: relative;
-  top:0;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); 
+   top:0;
   right:0;
   background-color:transparent;
-  border: solid black 8px;
+  background-color: #696972;
   color:#fff;
-  left: 70%;
-  top: -20%;
+  right: -100%;
+  top: -70%;
   transition:1s ease-in-out;
-  height: 15%;
-  width: 15%;
-  padding: 10px;
+  height: 210px;
+  width: 250px;
+}
+
+.info-animated {
+  right: -70%;
+  transition: all 1. ease-in-out;
+}
+
+.info > h1 {
   text-align: center;
+  margin-bottom: 10%;
+}
+
+.info > p {
+  padding-bottom: 4%;
+  margin-left: 3%;
 
 }
 
-@media (min-width: 760px) {
-  .hero-text ul li {
-    visibility: visible;
-  }
- 
-}
 
-@media (min-width: 1126px) {
-  .sky,
-  .hero-text {
-    background-size: contain;
-  }
-}
 
 
 
@@ -154,7 +164,8 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  height: 80vh;
+  width: 60vw;
   position: relative;
   left: 2%;
   top: 12%;
@@ -173,6 +184,10 @@ img {vertical-align: middle;}
 
 /* The dots/bullets/indicators */
 
+.image {
+  width:60vw;
+   height: 80vh;
+}
 
 .active {
   background-color: #717171;
@@ -199,4 +214,49 @@ img {vertical-align: middle;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
+}
+
+.info >a {
+  margin-left: 29%;
+    border: 0px;
+    background-color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 2px 5px;
+    color: #717171;
+    transition: all 0.5s ease;
+  }
+
+  .info >a:hover {
+    background-color: #888894;
+    color: rgba(0, 0, 0, 0.616);
+    transition: all 0.5s ease;
+  }
+
+
+  /* scroll bar */
+
+  html::-webkit-scrollbar {
+    width: 0.5vw;
+
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #777;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #5555;
+    border-radius: 10px;
+
+}
+
+html::-webkit-scrollbar-track:hover {
+    background-color: #555;
 }

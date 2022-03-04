@@ -1,4 +1,10 @@
 var slideIndex = 0;
+var div=document.getElementById("info")
+var divinfo=document.getElementById("divinfo")
+div.addEventListener("mouseover",e=> {
+  divinfo.classList.add("info-animated")
+})
+
 showSlides();
 
 function showSlides() {
@@ -17,3 +23,4 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
+
