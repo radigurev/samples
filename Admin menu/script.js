@@ -1,71 +1,112 @@
+Chart.defaults.global.responsive = true;
+Chart.defaults.global.defaultFontColor = 'blue';
+Chart.defaults.global.tooltips.mode = 'label';
+Chart.defaults.global.tooltips.backgroundColor = '#fff';
+Chart.defaults.global.tooltips.titleColor = '#888';
+Chart.defaults.global.tooltips.bodyColor = '#888';
+Chart.defaults.global.animation.duration = 1500;
+Chart.defaults.global.animation.easing = 'easeInOutQuart';
+Chart.defaults.global.maintainAspectRatio = true;
+var data = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+    datasets: [
+        {
+            label: "Grades",
+            fill: true,
+            backgroundColor: "rgba(220,220,220,0.2)",
+            borderWidth: 2,
+            borderColor: "rgba(220,220,220,1)",
+            pointBorderColor: "rgba(220,220,220,1)",
+            pointBackgroundColor: "#fff",
+            pointBorderWidth: 1,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: "rgba(220,220,220,1)",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointHoverBorderWidth: 2,
+            data: [65, 59, 80, 81, 56, 55, 40],
+        }
+    ]
+};
+
+var data2 = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+    datasets: [
+        {
+            label: "Grades",
+            fill: true,
+            backgroundColor: "rgba(220,220,220,0.2)",
+            borderWidth: 2,
+            borderColor: "rgba(220,220,220,1)",
+            pointBorderColor: "rgba(220,220,220,1)",
+            pointBackgroundColor: "#fff",
+            pointBorderWidth: 1,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: "rgba(220,220,220,1)",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointHoverBorderWidth: 2,
+            data: [65, 59, 80, 81, 56, 55, 40],
+        }
+    ]
+};
+
 const ctx = document.getElementById('canvas');
-const myChart = new Chart(ctx, {
+var weeklyClicksChart = new Chart(ctx, {
     type: 'line',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 4
-        }]
-    },
+    data: data,
+    scaleFontColor: 'red',
     options: {
+          scaleFontColor: 'red',
+        responsive: true,
+        tooltips: {
+            mode: 'single',
+        },
         scales: {
-            y: {
-                beginAtZero: true
-            }
+            xAxes: [{
+                gridLines: {
+                    display: false,
+                },
+                ticks: {
+                  fontColor: "#FFF", // this here
+                },
+            }],
+            yAxes: [{
+                display: false,
+                tension: 0,
+                gridLines: {
+                    display: false,
+                },
+            }],
         }
     }
 });
 
-const ctx2 = document.getElementById('canvas2');
-const chart = new Chart(ctx2, {
+var ctx2 = document.getElementById('canvas2');
+var chart2 = new Chart(ctx2, {
     type: 'line',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 10, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 4
-        }]
-    },
+    data: data2,
+    scaleFontColor: 'red',
     options: {
+          scaleFontColor: 'red',
+        responsive: true,
+        tooltips: {
+            mode: 'single',
+        },
         scales: {
-            y: {
-                beginAtZero: true
-            }
+            xAxes: [{
+                gridLines: {
+                    display: false,
+                },
+                ticks: {
+                  fontColor: "#FFF", // this here
+                },
+            }],
+            yAxes: [{
+                display: false,
+                gridLines: {
+                    display: false,
+                },
+            }],
         }
     }
 });
+    

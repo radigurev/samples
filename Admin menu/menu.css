@@ -5,7 +5,7 @@ body
 	font-family: "Open Sans", arial;
 	color: black;
 	font-weight:300;
-  background-color: #736b96;
+  background-color: #fff;
 }
 
 
@@ -104,7 +104,7 @@ opacity:1;
 }
 
 .main-menu {
-background:#F7F7F7;
+background:#074e88;
 position:absolute;
 top:0;
 bottom:0;
@@ -117,6 +117,7 @@ transition:width .2s linear;
 -webkit-transform:translateZ(0) scale(1,1);
 box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
   opacity:1;
+  z-index: 1;
 }
 
 .main-menu>ul {
@@ -172,18 +173,6 @@ display:table-cell;
 vertical-align:middle;
 width:190px;
 font-family: 'Titillium Web', sans-serif;
-}
-
-.main-menu .share {
-}
-
-
-
-.main-menu .fb-like {
-
-left: 180px;
-position:absolute;
-top: 15px;
 }
 
 .main-menu>ul.logout {
@@ -309,8 +298,9 @@ height: 100%;
   border: 0px;
   margin-left: 10%;
   margin-top: -20.2%;
-  background-color: rgba(255, 255, 255, 0.623);
   border-radius: 15px;
+  background-color: #074e88;
+  color: #fff;
 }
 
 .container2 {
@@ -319,9 +309,13 @@ height: 100%;
   border-radius: 15px;
   margin-left: 55%;
   margin-top: 5%;
-  background-color: rgba(255, 255, 255, 0.623);
+  background-color: #074e88;
+  color: #fff;
 }
 
+#canvas {
+  color: #fff;
+}
 
 .line {
   background-color: rgba(255, 255, 255, 0.623);
@@ -335,19 +329,48 @@ height: 100%;
   background-color: rgba(255, 255, 255, 0.623);
   display: block;
     overflow: hidden;
+    border-radius: 15px;
+    top: 70%;
+    background-color: #074e88;
 }
 
-#grade-div, #absence-div, #response-div {
+.ranking2 {
+  position: absolute;
+  width: 40vw;
+  height: 20vh;
+  margin-left: 55%;
+  background-color: rgba(255, 255, 255, 0.623);
+  display: block;
+    overflow: hidden;
+    border-radius: 15px;
+    top: 70%;
+    background-color: #074e88;
+}
+
+#grade-div, #absence-div, #response-div,#year-div,#class-div,#school-div {
   float: left;
   margin: 0px;
-  width: 33.33%;  
+  width: 33%;  
 }
 
-.ranking > div > h1, .ranking > div > h2 {
+#grade-div, #absence-div,#year-div,#class-div {
+  border-right: solid 1px #fff;
+  height: 100%;
+}
+
+#year-div,#class-div,#school-div {
+  font-size: 15px;
+}
+
+#year-div > p {
+  margin-bottom: 20px;
+}
+
+.ranking > div > h1, .ranking > div > h2, .ranking2 > div > h1, .ranking2 > div > h2 {
   display: inline-block;
   text-align: center;
   width:100%;
-  
+  color: #fff;
 }
 
 #canvas {
