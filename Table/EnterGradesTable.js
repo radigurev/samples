@@ -88,7 +88,7 @@ function CloseTextBox(index) {
 
 }
 
-function getGrades() {
+/*function getGrades() {
     let index=0
     let grade =0.0
    console.log(grade)
@@ -101,12 +101,16 @@ function getGrades() {
         grade = 0.0
   })
 
+
     var json=JSON.stringify(finalList)
     console.log(json)
     var text = document.getElementsByClassName('json')
     text.textContent=json
     console.log(text)
 }
+ */
+
+
 
 class Student {
     constructor(name,subject,grade){
